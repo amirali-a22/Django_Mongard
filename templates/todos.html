@@ -1,0 +1,13 @@
+{% extends 'BASE_TEMPLATE.html' %}
+
+{% block content %}
+<h1>all todos page</h1>
+
+{% for todo in todos %}
+    <a href="{% url 'blog:todo' todo.id %}">{{ todo.title }}</a>
+    <P>{{ todo.description }}</P>
+    <small>{{ todo.time }}</small>
+    <br><br><br>
+{% endfor %}
+
+{% endblock %}
